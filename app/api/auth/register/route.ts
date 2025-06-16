@@ -36,8 +36,8 @@ export async function POST(request:NextRequest){
          }
 
 
-    }catch{
-        console.error(error,"error while registration");
+    }catch(error){
+        console.error("Error while registration:", error);
        return NextResponse.json(
                 {error:"Failed to register"},
                 {status:400}
